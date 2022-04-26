@@ -1,7 +1,24 @@
 <div>
   <div class="row">
     <div class="col-md-8">
-      <textarea id="code-screen">{{content}}</textarea>
+      <form id="myform" name="myform" method="post" action="../compiled" target="_blank">
+      <textarea id="code" name="code">{{content}}</textarea>
+      <center>
+
+<div class="panel-heading">
+Language : <select name="lang">
+  <option value="C">C</option>
+  <option value="C++">C++</option>
+  <option value="Java">Java</option>  
+  <option value="Python">Python</option> 
+  <option value="CS">PHP</option>  
+    
+  </select>
+</div>
+
+<input class="btn btn-success"type="submit" value="submit"  name="submit" />
+</form>
+</center>
     </div>
     <div class="col-md-4" id="chatbox">
       <div class="panel panel-primary">
@@ -62,12 +79,12 @@
   var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
   var socket = io.connect();
-  var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
     theme: "monokai"
   });
 
-  var code = $('#code-screen').val();
+  var code = $('#code').val();
   var cmClient;
   function init(str, revision, clients, serverAdapter) {
     if (!code) {

@@ -9,6 +9,6 @@ module.exports ={
 			pass:'arkpmail'
 		}
 	},
-  dbConnstring: 'mongodb://admin:0324Junaid@ds139960.mlab.com:39960/code4share',
+  dbConnstring: 'mongodb+srv://codeuser:code2520@cluster0.x1zsd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   sessionKey: 'HaloCode-Editor',
 }

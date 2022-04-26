@@ -38,7 +38,7 @@ passport.use(new LocalStrategy({
 passport.use(new GoogleStrategy({
       clientID: '502472303125-c2535tb9j8s1m26ht2e0ld54j94j40bt.apps.googleusercontent.com',
       clientSecret: 'FHD4Pa2YURhUURo8Ndi0G4P0',
-      callbackURL: 'https://live-code-editor.herokuapp.com/auth/google/callback'
+      callbackURL: 'http://localhost:3000/auth/google/callback'
     },
     function(token, refreshToken, profile, done) {
     User.findOne({'google.id': profile.id}, function(err, user) {

@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressValidator = require('express-validator');
-
+const port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 
 var passport = require('passport');
@@ -81,3 +81,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+   
